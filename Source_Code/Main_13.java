@@ -23,9 +23,11 @@ public class Main_13 {
         System.out.println("Sistem Antrian Resto Royal Delish");
 
     Scanner sc = new Scanner(System.in);
+    Scanner ok = new Scanner(System.in);
     DLL_13 f = new DLL_13();
     int opsi = 0;
-    String no, nama;
+    String no, nama, pesan;
+    int nomor, harga;
 
     do {
         menu();
@@ -53,6 +55,15 @@ public class Main_13 {
 
             case 3:
             f.hapusAntrian();
+            System.out.print("nomor pesanan : ");
+            nomor = ok.nextInt();
+            System.out.print("nama pesanan");
+            pesan = sc.nextLine();
+            sc.nextLine();
+            System.out.print("Harga : ");
+            harga = sc.nextInt();
+            f.addPesanan(nomor, pesan, harga);
+
             break;
 
             case 4:
