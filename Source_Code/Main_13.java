@@ -24,6 +24,7 @@ public class Main_13 {
 
     Scanner sc = new Scanner(System.in);
     Scanner ok = new Scanner(System.in);
+    Scanner x = new Scanner(System.in);
     DLL_13 f = new DLL_13();
     int opsi = 0;
     String no, nama, pesan;
@@ -57,11 +58,10 @@ public class Main_13 {
             f.hapusAntrian();
             System.out.print("nomor pesanan : ");
             nomor = ok.nextInt();
-            System.out.print("nama pesanan");
-            pesan = sc.nextLine();
-            sc.nextLine();
+            System.out.print("nama pesanan : ");
+            pesan = x.nextLine();
             System.out.print("Harga : ");
-            harga = sc.nextInt();
+            harga = ok.nextInt();
             f.addPesanan(nomor, pesan, harga);
 
             break;
@@ -71,8 +71,8 @@ public class Main_13 {
             break;
 
             case 5:
-            System.out.print("Total : ");
-            f.total();
+            int t = f.total();
+            System.out.println("Total : " + t);
             break;
 
             case 6:
